@@ -1,0 +1,308 @@
+1  yum update -y
+    2  yum install docker -y
+    3  which docker
+    4  docker --version
+    5  docker info
+    6  service docker status
+    7  service docker start
+    8  service docker status
+    9  docker info
+   10  docker pull ubuntu:latest
+   11  docker images
+   12  clear
+   13  docker images
+   14  docker pull ubuntu:mantic
+   15  docker images
+   16  docker pull mysql
+   17  docker images
+   18  docker pull amazonlinux
+   19  docker pull jenkins/jenkins
+   20  docker images
+   21  docker create -it --name Webserver ubuntu /bin/bash
+   22  docker ps -a
+   23  docker ps
+   24  docker ps
+   25  docker ps -a
+   26  docker create -it --name amazonweb amazonlinux /bin/bash
+   27  docker images
+   28  docker create -it --name sample oraclelinux /bin/bash
+   29  docker create -it --name sample oraclelinux:8-slim  /bin/bash
+   30  docker ps -a
+   31  docker ps -a
+   32  docker ps
+   33  clear
+   34  docker create amazonlinux /bin/bash
+   35  docker ps -a
+   36  docker start aaf5a7b48ee2
+   37  docker ps
+   38  docker ps -a
+   39  docker create -it --name A1 mysql /bin/bash
+   40  docker images
+   41  docker ps -a
+   42  docker start A1
+   43  docker ps
+   44  docker attach A1
+   45  docker ps -a
+   46  docker start A1
+   47  docker attach A1
+   48  docker ps
+   49  docker ps -a
+   50  docker run -it --name A2 ubuntu /bin/bash
+   51  docker ps
+   52  docker stop A1 A2
+   53  docker ps
+   54  docker ps -a
+   55  docker ps -a
+   56  docker start A2
+   57  docker ps -a
+   58  docker pause A2
+   59  docker ps -a
+   60  docker unpause A2
+   61  docker ps -a
+   62  docker rm A2
+   63  docker rm -f A2
+   64  docker ps -a
+
+
+
+apt-get update -y
+apt-get install apache2 -y
+apt-get install vim -y
+vi index.html
+once paste the code 
+:wq
+
+
+################################################################################
+
+10th Oct - Tuesday :
+
+docker run -it --name env ubuntu /bin/bash # Inside the Container
+apt-get update -y
+apt-get install default-jdk -y
+apt-get install mysql-server -y
+apt-get install git -y
+apt-get install apache2 -y
+mkdir Project
+cd Project
+touch Login.html
+exit
+
+   93  docker ps -a
+   94  docker commit env oracle-env:1.0
+   95  docker images
+   96  docker images
+   97  docker run -it --name C1 oracle-env
+   98  docker run -it --name C1 oracle-env:1.0
+   docker tag oracle-env:1.0 muralisocial123/oracle-env:1.0
+  102  docker login
+  103  docker images
+  104  docker push muralisocial123/oracle-env:1.0
+
+
+  ################################################################################
+
+  Dockerfile :
+
+  vi Dockerfile
+  120  git clone https://github.com/Msocial123/maven-web-application.git
+  121  yum install git -y
+  122  git clone https://github.com/Msocial123/maven-web-application.git
+  123  ls
+  124  cd maven-web-app-application
+  125  cd  maven-web-application
+  126  ls
+  127  cd ..
+  128  ls
+  129  vi Dockerfile
+  130  docker build -t sample-img .
+  131  docker images
+  132  docker inspect sample-img:latest
+  133  docker images
+  134  docker run -it --name C3 sample-img:latest /bin/bash
+FROM ubuntu:latest
+RUN mkdir /Oracle
+WORKDIR /Oracle
+RUN apt-get update -y
+RUN apt-get install default-jdk -y
+RUN apt-get install mysql-server -y
+RUN apt-get install git -y
+COPY . /Oracle
+ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz .
+RUN tar -xvzf apache-tomcat-9.0.80.tar.gz
+
+##############################################################\
+
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html
+
+docker run -td --name web -p 8080:80 sample-web:latest
+
+
+https://github.com/Msocial123/Flask-Docker-App.git
+
+
+################################################################################################
+
+11th Oct :
+
+https://github.com/Msocial123/simple-java-maven-app-1.git
+
+Volumes :
+
+docker run -it --name A2 -v /Data ubuntu /bin/bash
+  227  rm -rf A2
+  228  docker ps
+  229  docker ps -a
+  230  docker rm -f A2
+  231  docker ps -a
+  232  docker volume ls
+  233  cd /var
+  234  ls
+  235  cd lib
+  236  ls
+  237  cd docker
+  238  ls
+  239  cd volumes
+  240  ls
+  241  cd 6efad1f99e1085753bd86cd1d8655be8d3f72b6ecb17fe706fb384dbdd456ab1
+  242  ls
+  243  cd -data
+  244  cd _data
+  245  ls
+  246  cd /home/ec2-user
+
+  docker run -it --name A2 -v /Data ubuntu /bin/bash
+  249  docker volume ls
+  250  clear
+  251  docker run -it --name C1 -v mydata:/Murali ubuntu /bin/bash
+  252  docker volume ls
+  253  cd mydata
+  254  cd /var/lib/docker/volume/mydata
+  255  cd /var/lib/docker/volumes/mydata
+  256  ls
+  257  cd _data
+  258  ls
+  259  cd /home/ec2-user
+
+  Bind Volumes :
+
+  docker ps
+  262  docker ps -a
+  263  pwd
+  264  cd /opt
+  265  mkdir Oracle
+  266  ls
+  267  cd /home/ec2-user
+  268  docker run -it --name M1 -v /opt/Oracle:/Mohan ubuntu /bin/bash
+  269  docker volume ls
+  270  cd /opt/Oracle
+  271  ls
+  272  touch DevOps RDBMS MySQL
+  273  cd /home/ec2-user
+  274  docker ps -a
+  275  docker start M1
+  276  docker attach M1
+  277  pwd
+  278  docker run -it --name M2 -v /home/ec2-user:/Mohan ubuntu /bin/bash
+  279  docker run -it --name M3 --privileged=true --volumes-from M2 ubuntu /bin/bash
+  280  docker run -it --name M4 --privileged=true --volumes-from M3 ubuntu /bin/bash
+  281  docker run -it --name M5 --privileged=true --volumes-from M3 M2 ubuntu /bin/bash
+
+
+################################################################################################################
+Docker Networking
+
+ docker network ls
+  284  docker ps
+  285  docker ps -a
+  286  docker inspect M4
+  287  docker ps -a
+  288  docker start M4
+  289  docker ps
+  290  docker inspect M4
+  291  brctl show
+  292  ifconfig
+  293  docker ps -a
+  294  docker rm -f web
+  295  docker ps
+  296  docker run -it --name web ubuntu /bin/bash
+  297  docker ps
+  298  docker run -it --name app ubuntu /bin/bash
+  299  docker ps
+  300  docker inspect app
+  301  docker inspect web
+  302  docker network inspect bridge
+  303  docker attach web
+  304  docker network create mynetwork --subnet=10.0.0.1/16 --gateway=10.0.10.100
+  305  docker network ls
+  306  docker run -it  --net mynetwork --name C1 ubuntu /bin/bash
+  307  docker run -it  --net mynetwork --name D1 ubuntu /bin/bash
+  308  docker inspect D1
+  309  docker ps
+  310  docker start web
+  311  docker attach web
+  312  docker network connect bridge D1
+  313  docker attach web
+  314  docker attach D1
+
+
+
+
+  Task URL :
+
+  https://docs.docker.com/get-started/07_multi_container/
+
+
+
+  #########################################################################################3
+
+  OCt 12th :
+
+  https://docs.oracle.com/en/learn/ol-minikube/#introduction
+
+  rnqcqvw4pvmkdjk9lhcsn77w74pk4n2kqvzxkk4f7br4kmbkhs6rpm
+
+
+
+
+  Step3: sudo groupadd docker && sudo usermod -aG docker $USER
+
+
+
+  docker pull muralisocial123/testing-py:1.0
+  docker pull muralisocial123/python-app-sample:1.0
+
+
+  kubectl create deployment nginx-app --image=nginx 
+  380  kubectl get deployments
+  381  kubectl scale deployment nginx-app --replicas=5
+  382  kubectl get deployments
+  383  kubectl get pods -o wide
+  384  kubectl get rs
+  385  kubectl delete pod nginx-app-5c64488cdf-5rxqc 
+  386  kubectl get pods -o wide
+  387  kubectl get events --sort-by=.metadata.creationTimestamp
+
+
+
+
+
+  apt-get install iputils-ping -y
+  apt-get install iproute2 -y
+
+
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-secret
+data:
+  secret1: cGFzc3dvcmQxMjM0
+  secret2: cGFzc3dvcmQxMjM0NQ==
+
+
+https://pwittrock.github.io/docs/api-reference/v1.7/
+
+
+
+

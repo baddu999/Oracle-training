@@ -1,0 +1,16 @@
+ssh -i "Rancher.pem" ubuntu@ec2-65-0-182-209.ap-south-1.compute.amazonaws.com - Arshdeep& Ritam - 65.0.182.209
+ssh -i "Rancher.pem" ubuntu@ec2-13-233-92-115.ap-south-1.compute.amazonaws.com - Bhavesh & Priyansh
+ssh -i "Rancher.pem" ubuntu@ec2-13-235-0-148.ap-south-1.compute.amazonaws.com - Murali 
+ssh -i "Rancher.pem" ubuntu@ec2-3-110-142-176.ap-south-1.compute.amazonaws.com- Abhi & Raghav
+ssh -i "Rancher.pem" ubuntu@ec2-65-2-9-69.ap-south-1.compute.amazonaws.com - SoumyaDeep & Kanhaiya
+ssh -i "Rancher-Mac.pem" ubuntu@ec2-52-66-200-155.ap-south-1.compute.amazonaws.com- Anshu & Roshitha
+ssh -i "Rancher-Mac.pem" ubuntu@ec2-52-66-207-23.ap-south-1.compute.amazonaws.com - Neelakshi & Sreekar
+ssh -i "Rancher.pem" ubuntu@ec2-13-233-186-61.ap-south-1.compute.amazonaws.com - Ripon & Vedanth 
+
+ssh -i "Oracle-Linux-Oct.pem" ec2-user@ec2-54-170-242-163.eu-west-1.compute.amazonaws.com - Ripon - 99205044-lab.user12
+ssh -i "Oracle-Linux-Oct.pem" ec2-user@ec2-54-74-233-136.eu-west-1.compute.amazonaws.com - SoumyaDeep - 99205044-lab.user13
+ssh -i "Batch3.pem" ec2-user@ec2-54-74-179-158.eu-west-1.compute.amazonaws.com - Ritam - 99205044-lab.user14
+ ssh -i "Oracle-D&K-Training.pem" ec2-user@ec2-13-214-128-207.ap-southeast-1.compute.amazonaws.com-Arshdeep** - 99205044-lab.user16
+ssh -i "Oracle-Linux-Oct.pem" ec2-user@ec2-54-229-189-53.eu-west-1.compute.amazonaws.com - Goutham - 99205044-lab.user17
+
+

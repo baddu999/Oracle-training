@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-pod
+  labels:
+    app: sample
+spec:
+  containers:
+    - name: python
+      image: muralisocial123/python-app:2.0
+    - name: testing
+      image: muralisocial123/sample-web:latest
